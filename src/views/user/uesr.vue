@@ -1,5 +1,5 @@
 <template>
-  <div class="user">222
+  <div class="user">
     <el-card class="box-card">
       <el-form :inline="true" size="mini"  class="demo-form-inline">
         <el-form-item>
@@ -213,7 +213,7 @@ export default {
       this.getUser();
     },
     /*
-     *搜索事件搜索number 
+     *搜索事件搜索number
      * @this.$store.commit("setCurrentPage", 1); 修改vuex的值
      */
     onSubmit(){
@@ -331,7 +331,7 @@ export default {
       oss.ossUploadFile(option);
     },
     /*
-     *上传成功的回调 
+     *上传成功的回调
      *  @flie成功的数据
      */
     upload(file) {
