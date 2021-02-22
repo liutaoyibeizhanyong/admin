@@ -1,0 +1,232 @@
+@font-face {
+  font-family: electronicFont;
+  src: url('../assets/font/DS-DIGIT.TTF');
+}
+.home{
+    height: 100%;
+    width: 100;
+    display: flex;
+    position: relative;
+    background: url("../assets/img/home/bg.jpg") center;
+    background-size: 100%;
+    .loding{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0,9,60,225);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+    }
+    .column{
+        flex: 3;
+        height: 100%;
+        display: flex;
+        flex-direction:column ;
+      
+        .chart{
+            height: 200px;
+            width: 98%;
+        }
+     
+        h5{
+            line-height: 32px;
+            text-align: center;
+            
+            font-size: 15px;
+            font-weight: 400;
+            color: #990af8;
+        }
+    }
+    /*
+    *图表左边样式
+    */
+    .left{
+        .box{
+            flex: 2;
+            padding: 0 10px;
+            overflow: hidden;
+       
+        }
+    }
+    /*
+    *图表右边样式
+    */
+    .right{
+        .box{
+            flex: 2;
+        }
+    }
+    /*
+    *图表中间样式
+    */
+    .middle{
+        flex: 6;
+        .top{
+            flex: 3;
+            position: relative;
+         
+          
+           
+            .no {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              background: rgba(111, 111, 111, 0.1);
+              width: 94%;
+
+              .no-bd {
+                margin-top: 15px;
+                ul {
+                  display: flex;
+                  width: 100%;
+                  li {
+                    flex: 1;
+                         line-height: 20px;
+                    text-align: center;
+                    font-size: 20px;
+                    color: rgba(255, 255, 255, 0.7);
+                   
+                  }
+                }
+              }
+    
+              .no-hd {
+                border: 1px solid rgba(25, 186, 139, 0.17);
+                position: relative;
+                margin-top: 26px;
+                ul {
+                  display: flex;
+                  
+                  li {
+                    flex: 1;
+                    line-height: 80px;
+                    font-size: 70px;
+                    color: #ffeb7b;
+                    text-align: center;
+                    font-family: electronicFont;
+                    font-weight: bold;
+                    position: relative;
+    
+                    &:first-child::after {
+                      content: "";
+                      position: absolute;
+                      height: 50%;
+                      width: 1px;
+                      background: rgba(255, 255, 255, 0.2);
+                      right: 0;
+                      top: 25%;
+                    }
+                  }
+                }
+    
+                &::before {
+                  content: '';
+                  left: 0;
+                  top: 0;
+                  width: 20px;
+                  height: 10px;
+                  border-left: 1px solid #02a6b5;
+                  border-top: 1px solid #02a6b5;
+                  position: absolute;
+                }
+    
+                &::after {
+                  content: '';
+                  right: 0;
+                  bottom: 0;
+                  width: 20px;
+                  height: 10px;
+                  border-right: 1px solid #02a6b5;
+                  border-bottom: 1px solid #02a6b5;
+                  position: absolute;
+                }
+              }
+            }
+        }
+        .button{
+            flex: 7;
+            .map{
+                height: 100%;
+                width: 100%;
+                overflow: hidden;
+                position: relative;
+                left: 0;
+                top: 0;
+
+                .chart{
+                  z-index: 99;
+                  height: 100%;
+                  width: 100%;
+           
+                }
+                .map1 {
+                  height: 98%;
+                  width: 98%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background: url('../assets/img/home/map.png') no-repeat center;
+                    background-size: 100%;
+                    opacity: 0.4;
+                  }
+            
+                  .map2 {
+                    height: 98%;
+                    width: 98%;
+                    position: absolute;
+            
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background: url('../assets/img/home/lbx.png') no-repeat center;
+                    background-size: 100%;
+                    opacity: 0.4;
+                    animation: rotate1 10s linear infinite;
+                  }
+            
+                  .map3 {
+                    height: 106%;
+                    width: 106%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background: url('../assets/img/home/jt.png') no-repeat center;
+                    background-size: 100%;
+                    opacity: 0.8;
+                    animation: rotate2 10s linear infinite;
+                  }
+            
+                  @keyframes rotate1 {
+                    from {
+            
+                      transform: translate(-50%, -50%) rotate(0deg);
+                    }
+            
+                    to {
+            
+                      transform: translate(-50%, -50%) rotate(360deg);
+                    }
+                  }
+            
+                  @keyframes rotate2 {
+                    from {
+            
+                      transform: translate(-50%, -50%) rotate(360deg);
+                    }
+            
+                    to {
+            
+                      transform: translate(-50%, -50%) rotate(0deg);
+                    }
+                  }
+            }
+        }
+    }
+}
