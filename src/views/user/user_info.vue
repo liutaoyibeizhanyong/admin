@@ -1,6 +1,6 @@
 <template>
   <div class="user-info">
-    <el-card class="box-card">123
+    <el-card class="box-card">
       <el-form :inline="true" size="mini"  class="demo-form-inline">
         <el-form-item>
           <el-input v-model="params.number" @keyup.enter.native="onSubmit()" clearable show-word-limit maxlength="6" placeholder="请搜索用户ID"></el-input>
